@@ -20,7 +20,7 @@ Project consists of multiple resources being created within Microsoft Azure. The
 
 <p align="center">
 Create the VM: <br/>
-<img src=""/>
+<img src="https://imgur.com/a/ijuPMUk"/>
 <br />
 <br />
 

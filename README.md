@@ -63,5 +63,19 @@ Ensure Logs are being collected properly: <br/><br />
 <br />
 <br />
 <br />
+Use generic logs from VM to create custom logs in the Log Analytic Workspace: <br/><br />
+<img src="https://i.imgur.com/hUvmWGb.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+<img src="https://i.imgur.com/Q6hwnEF.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Create a new Workbook within Microsoft Sentinel: <br/><br />
+<img src="https://i.imgur.com/ePasONG.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
 
 

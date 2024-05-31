@@ -19,8 +19,49 @@ Project consists of multiple resources being created within Microsoft Azure. The
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Create the VM: <br/>
-<img src="https://imgur.com/a/ijuPMUk" height="80%" width="80%" alt="SIEM Steps"/>
+Create the VM: <br/><br />
+<img src="https://i.imgur.com/XL5RxwD_d.jpg?maxwidth=520&shape=thumb&fidelity=high" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
+<br />
+Turn off Firewall within the VM: <br/><br />
+<img src="https://i.imgur.com/qoGqOhh.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Create the Log Analytics Workspace: <br/><br />
+<img src="https://i.imgur.com/QjkVCXc.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Configure Log Settings: <br/><br />
+<img src="https://i.imgur.com/lzIxhgX.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+<img src="https://i.imgur.com/hcMc6ON.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Connect VM to the Log Analytics Workspace: <br/><br />
+<img src="https://i.imgur.com/3M8NQZw.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Setup Microsoft Sentinel: <br/><br />
+<img src="https://i.imgur.com/whBR9Ex.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Run Script in Powershell to collect logs: <br/><br />
+<img src="https://i.imgur.com/puDYACr.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Ensure Logs are being collected properly: <br/><br />
+<img src="https://i.imgur.com/kq4h60E.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+
 

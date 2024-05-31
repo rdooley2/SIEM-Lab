@@ -34,7 +34,7 @@ Create the Log Analytics Workspace: <br/><br />
 <br />
 <br />
 <br />
-Configure th e Log Settings: <br/><br />
+Configure the Log Settings: <br/><br />
 <img src="https://i.imgur.com/lzIxhgX.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />

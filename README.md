@@ -1,6 +1,6 @@
 <h1>Microsoft Azure - Mapping RDP Brute Force Attacks</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+ ### [YouTube Demonstration]()
 
 <h2>Description</h2>
 This project consists of multiple resources being created and utilized within Microsoft Azure. These resources include a Virtual Machine, Log Analytics Workspace, and Microsoft Sentinel Workbook. The settings within the virtual machine are edited to have all firewalls disabled making it more appealing to hackers. A custom script is run in the VM Powershell that looks for Event ID 4625 (Failed Logon) within Windows Event Viewer. The script will pull the IP from each event with the correct ID and send it to a third party API. The API will then return logs to the Log Analytics Workspace containing geographic information. The raw data in the logs will then be parsed through using a custom query into custom fields (latitude, longitude, state/province, and country). These custom fields are then used to create a workbook within Microsoft Sentinel that will plot the latitude and longitude onto a world map. 

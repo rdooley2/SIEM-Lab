@@ -14,7 +14,7 @@ This project consists of multiple resources being created and utilized within Mi
 
 <h2>Environments Used </h2>
 
-- <b>Microsoft Azure</b> (21H2)
+- <b>Microsoft Azure</b>
 
 <h2>Program walk-through:</h2>
 

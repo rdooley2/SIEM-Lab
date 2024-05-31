@@ -34,7 +34,7 @@ Create the Log Analytics Workspace: <br/><br />
 <br />
 <br />
 <br />
-Configure Log Settings: <br/><br />
+Configure th e Log Settings: <br/><br />
 <img src="https://i.imgur.com/lzIxhgX.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
@@ -43,7 +43,7 @@ Configure Log Settings: <br/><br />
 <br />
 <br />
 <br />
-Connect VM to the Log Analytics Workspace: <br/><br />
+Connect the VM to the Log Analytics Workspace: <br/><br />
 <img src="https://i.imgur.com/3M8NQZw.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
@@ -53,7 +53,7 @@ Setup Microsoft Sentinel: <br/><br />
 <br />
 <br />
 <br />
-Run Script in Powershell to collect logs: <br/><br />
+Run the custom script in Powershell to collect logs: <br/><br />
 <img src="https://i.imgur.com/puDYACr.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
@@ -63,7 +63,7 @@ Ensure logs are being collected properly: <br/><br />
 <br />
 <br />
 <br />
-Use generic logs from VM to create custom logs in the Log Analytic Workspace: <br/><br />
+Use generic logs from the VM to create custom logs in the Log Analytic Workspace: <br/><br />
 <img src="https://i.imgur.com/hUvmWGb.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
@@ -77,18 +77,18 @@ Create a new workbook within Microsoft Sentinel: <br/><br />
 <br />
 <br />
 <br />
-Insert custom query to parse raw data into seperate fields: <br/><br />
+Insert a custom query to parse raw data into seperate fields: <br/><br />
 <img src="https://i.imgur.com/OvRZKwP.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Adjust map settings: <br/><br />
+Adjust the map settings: <br/><br />
 <img src="https://i.imgur.com/bmAgz8B.png" height="80%" width="80%" alt="SIEM Steps"/>
  <img src="https://i.imgur.com/EyVUCcd.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Finish and wait for people to attack!: <br/><br />
+Finish and wait for people to attack: <br/><br />
 <img src="https://i.imgur.com/uNaFtOM.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />

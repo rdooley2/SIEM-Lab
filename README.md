@@ -3,7 +3,7 @@
  ### [YouTube Demonstration]()
 
 <h2>Description</h2>
-This project utilizes multiple custom resources within Microsoft Azure. These resources include a Virtual Machine, Log Analytics Workspace, and Microsoft Sentinel Workbook. The settings within the virtual machine are changed to have all firewalls disabled, making it more appealing to hackers. A custom script is run in the VM PowerShell that looks for Event ID 4625 (Failed Logon) within Windows Event Viewer. The script will pull the IP from each event with the correct ID and send it to a third-party API. The API will then return logs to the Log Analytics Workspace containing geographic information. The raw data in the logs will then be parsed through using a custom query into custom fields (latitude, longitude, state/province, and country). These custom fields are then used to create a workbook within Microsoft Sentinel that will plot the latitude and longitude onto a world map. 
+This project utilizes multiple custom resources within Microsoft Azure. These resources include a Virtual Machine, Log Analytics Workspace, and Microsoft Sentinel Workbook. The settings within the virtual machine are changed to have all firewalls disabled, making it more appealing to hackers. A custom script is run in the VM PowerShell that looks for Event ID 4625 (Failed Logon) within Windows Event Viewer. The script will pull the IP from each event with the correct ID and send it to a third-party API. The API will then return logs to the Log Analytics Workspace containing geographic information. The raw data in the logs will then be parsed through with a custom query into custom fields (latitude, longitude, state/province, and country). These custom fields are then used to create a workbook within Microsoft Sentinel that will plot the latitude and longitude onto a world map. 
 
 
 
@@ -24,7 +24,7 @@ Create the VM: <br/><br />
 <br />
 <br />
 <br />
-Turn off Firewall within the VM: <br/><br />
+Turn off the Firewall within the VM: <br/><br />
 <img src="https://i.imgur.com/qoGqOhh.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
@@ -71,7 +71,7 @@ Create a new workbook within Microsoft Sentinel: <br/><br />
 <br />
 <br />
 <br />
-Insert a custom query to parse raw data into seperate fields: <br/><br />
+Insert a custom query to parse raw data into separate fields: <br/><br />
 <img src="https://i.imgur.com/OvRZKwP.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />

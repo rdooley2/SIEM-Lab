@@ -1,9 +1,9 @@
 <h1>Microsoft Azure - Mapping RDP Brute Force Attacks</h1>
 
- ### [YouTube Demonstration]()
+ ### [YouTube Demonstration](https://youtu.be/aEHL0QrV0SE)
 
 <h2>Description</h2>
-This project utilizes multiple custom resources within Microsoft Azure. These resources include a Virtual Machine, Log Analytics Workspace, and Microsoft Sentinel Workbook. The settings within the virtual machine are changed to have all firewalls disabled, making it more appealing to hackers. A custom script is run in the VM PowerShell that looks for Event ID 4625 (Failed Logon) within Windows Event Viewer. The script will pull the IP from each event with the correct ID and send it to a third-party API. The API will then return logs to the Log Analytics Workspace containing geographic information. The raw data in the logs will then be parsed through with a custom query into custom fields (latitude, longitude, state/province, and country). These custom fields are then used to create a workbook within Microsoft Sentinel that will plot the latitude and longitude onto a world map. 
+This project utilizes multiple custom resources within Microsoft Azure. These resources include a Virtual Machine, Log Analytics Workspace, and Microsoft Sentinel Workbook. The settings within the virtual machine are changed to have all firewalls disabled, making it more appealing to hackers. A custom script is run in the VM PowerShell that looks for Event ID 4625 (Failed Logon) within Windows Event Viewer. The script will pull the IP from each event with the correct ID and send it to a third-party API. The API will then return logs to the Log Analytics Workspace containing geographic information. The raw data in the logs will then be parsed through with a custom query into custom fields (latitude, longitude, state/province, and country). These custom fields are then used to create a workbook within Microsoft Sentinel that will plot the latitude and longitude onto a world map. I also create an alert that detects each failed login attempt and generates incidents when they occur.
 
 
 
@@ -84,6 +84,17 @@ Adjust the map settings: <br/><br />
 <br />
 Allow people time to attack: <br/><br />
 <img src="https://i.imgur.com/uNaFtOM.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Add a custom alert for Event 4625 (Failed Logon): <br/><br />
+<img src="https://i.imgur.com/tMXCin5.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/FvbH1kD.png" height="80%" width="80%" alt="SIEM Steps"/>
+<br />
+<br />
+<br />
+Watch as incidents begin to pile in: <br/><br />
+<img src="https://i.imgur.com/ylE9BXp.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />

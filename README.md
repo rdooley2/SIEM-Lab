@@ -16,7 +16,7 @@ This project utilizes multiple custom resources within Microsoft Azure. These re
 
 - <b>Microsoft Azure</b>
 
-<h2>Program walk-through:</h2>
+<h2>Project walk-through:</h2>
 
 <p align="center">
 Create the VM: <br/><br />

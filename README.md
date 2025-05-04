@@ -1,4 +1,4 @@
-<h1>Microsoft Azure - Mapping RDP Brute Force Attacks</h1>
+<h1>SIEM Log Analysis with Microsoft Azure</h1>
 
  ### [YouTube Demonstration](https://youtu.be/aEHL0QrV0SE)
 

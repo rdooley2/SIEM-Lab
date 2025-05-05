@@ -25,81 +25,81 @@ In this project, I use Microsoft Azure to simulate and monitor cyberattacks. I c
 <h2>Project walk-through:</h2>
 
 <p align="center">
-Create the VM: <br/><br />
-<img src="https://i.imgur.com/XL5RxwD_d.jpg?maxwidth=520&shape=thumb&fidelity=high" height="80%" width="80%" alt="SIEM Steps"/>
+The first thing that I did for this project was create a resource group. This is essentially a folder where all of my resources will be stored for easier access: <br/><br />
+<img src="https://i.imgur.com/xR691To.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Turn off the Firewall within the VM: <br/><br />
-<img src="https://i.imgur.com/qoGqOhh.png" height="80%" width="80%" alt="SIEM Steps"/>
+The next step was to create a virtual network. This network allows the resources that I create, such as the Virtual Machine, to communicate amongst each other: <br/><br />
+<img src="https://i.imgur.com/uRv9hSe.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Create the Log Analytics Workspace: <br/><br />
-<img src="https://i.imgur.com/QjkVCXc.png" height="80%" width="80%" alt="SIEM Steps"/>
+Now that I had created the Virtual Network, it was time to create the Virtual Machine. I purposulfully chose an important sounding name so that attackers would be more enticed to try and login to it. Another thing that I will mention is that I changed the size to the smallest offered since VM storage is not important for this project. Finally, I disabled boot diagnostics since I did not need it: <br/><br />
+<img src="https://i.imgur.com/XMBgoih.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/MaepeEL.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/Hu6o8eO.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
 <br />
 <br />
 <br />
-Configure the Log Settings: <br/><br />
-<img src="https://i.imgur.com/lzIxhgX.png" height="80%" width="80%" alt="SIEM Steps"/>
-<img src="https://i.imgur.com/hcMc6ON.png" height="80%" width="80%" alt="SIEM Steps"/>
+After the VM was created, I navigated back to the Resource Group to ensure that everything was properly created: <br/><br />
+<img src="https://i.imgur.com/5dYHCz8.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Connect the VM to the Log Analytics Workspace: <br/><br />
-<img src="https://i.imgur.com/3M8NQZw.png" height="80%" width="80%" alt="SIEM Steps"/>
+Next I needed to configure the inbound security rules for the VM. I ended up deleting the RDP inbound rule and replacing it with one that allows all traffic to remotloy attempt to access the VM: <br/><br />
+<img src="https://i.imgur.com/qlOAc3I.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/Sidage4.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
 <br />
 <br />
 <br />
-Setup Microsoft Sentinel: <br/><br />
-<img src="https://i.imgur.com/whBR9Ex.png" height="80%" width="80%" alt="SIEM Steps"/>
+Now that the VM was properly configured, I needed to setup a Log Analytics Workspace. This workspace essentially allows me to collect log data from the VM: <br/><br />
+<img src="https://i.imgur.com/sTlP9tG.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Run the custom script in Powershell to collect logs: <br/><br />
-<img src="https://i.imgur.com/puDYACr.png" height="80%" width="80%" alt="SIEM Steps"/>
+With both the VM and LAW setup, I needed to create Microsoft Sentinel. Sentinel is Microsoft's version of a Security Information and Event Management system (SIEM). It is essential in analytics and threat visibility. It is also where we will be mapping the data we collect from attackers: <br/><br />
+<img src="https://i.imgur.com/XxE063J.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
 <br />
 <br />
 <br />
-Ensure logs are being collected properly: <br/><br />
-<img src="https://i.imgur.com/kq4h60E.png" height="80%" width="80%" alt="SIEM Steps"/>
+Once Sentinal was setup, I had to connect it to the LAW so that the collected log data could be used by Sentinel: <br/><br />
+<img src="https://i.imgur.com/VcWaYTp.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Use generic logs from the VM to create custom logs in the Log Analytic Workspace: <br/><br />
-<img src="https://i.imgur.com/hUvmWGb.png" height="80%" width="80%" alt="SIEM Steps"/>
-<img src="https://i.imgur.com/Q6hwnEF.png" height="80%" width="80%" alt="SIEM Steps"/>
+Next I went into the Content hub for Microsoft Sentinel and installed the Windows Security Event add-on. Doing this will allow us to connect the LAW to the VM: <br/><br />
+<img src="https://i.imgur.com/HCLWhEZ.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/yrCpkfB.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Create a new workbook within Microsoft Sentinel: <br/><br />
-<img src="https://i.imgur.com/ePasONG.png" height="80%" width="80%" alt="SIEM Steps"/>
+With the Windows Security Event add-on installed, I next had to configure it. I do this by opening the connector page: <br/><br />
+<img src="https://i.imgur.com/IhEedlN.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Insert a custom query to parse raw data into separate fields: <br/><br />
-<img src="https://i.imgur.com/OvRZKwP.png" height="80%" width="80%" alt="SIEM Steps"/>
+Once I clicked to open the connector page, I clicked to create a data collection rule. Making the rule connects the VM to the LAW and Sentinel instances: <br/><br />
+<img src="https://i.imgur.com/WdSVi47.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Adjust the map settings: <br/><br />
-<img src="https://i.imgur.com/bmAgz8B.png" height="80%" width="80%" alt="SIEM Steps"/>
-<img src="https://i.imgur.com/EyVUCcd.png" height="80%" width="80%" alt="SIEM Steps"/>
+Navigating to the page for the VM, I was able to confirm that the extension was successfully configured: <br/><br />
+<img src="https://i.imgur.com/NXlAVDj.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Allow people time to attack: <br/><br />
-<img src="https://i.imgur.com/uNaFtOM.png" height="80%" width="80%" alt="SIEM Steps"/>
+Most of the configuring was done at this point so I decided to enter the VM through Remote Desktop Connection. Once inside, I navigated to the Windows Defender Firewall and disabled everything making the system fully vulnerable to anyone on the internet: <br/><br />
+<img src="https://i.imgur.com/FqBKdUS.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Add a custom alert for Event 4625 (Failed Logon): <br/><br />
-<img src="https://i.imgur.com/tMXCin5.png" height="80%" width="80%" alt="SIEM Steps"/>
-<img src="https://i.imgur.com/FvbH1kD.png" height="80%" width="80%" alt="SIEM Steps"/>
+I then navigated to PowerShell on my PC and tried pinging the VM to ensure that it was properly accessible to anyone on the internet: <br/><br />
+<img src="https://i.imgur.com/WQEviJs.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
-Watch as incidents begin to pile in: <br/><br />
+Now that the VM was vulnerable, : <br/><br />
 <img src="https://i.imgur.com/ylE9BXp.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />

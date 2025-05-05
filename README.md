@@ -1,16 +1,22 @@
 <h1>SIEM Log Analysis with Microsoft Azure</h1>
 
- ### [YouTube Demonstration](https://youtu.be/aEHL0QrV0SE)
 
-<h2>Description</h2>
-This project utilizes multiple custom resources within Microsoft Azure. These resources include a Virtual Machine, Log Analytics Workspace, and Microsoft Sentinel Workbook. The settings within the virtual machine are changed to have all firewalls disabled, making it more appealing to hackers. A custom script is run in the VM PowerShell that looks for Event ID 4625 (Failed Logon) within Windows Event Viewer. The script will pull the IP from each event with the correct ID and send it to a third-party API. The API will then return logs to the Log Analytics Workspace containing geographic information. The raw data in the logs will then be parsed through with a custom query into custom fields (latitude, longitude, state/province, and country). These custom fields are then used to create a workbook within Microsoft Sentinel that will plot the latitude and longitude onto a world map. I also create an alert that detects each failed login attempt and generates incidents when they occur.
+<h2>Overview</h2>
+I used Microsoft Azure to create my own SIEM Dashboard and monitor for certain events. This project aimed to achieve the following goals:
+<br><br>
+<ul>
+ <li>Design and configure a functional SIEM in Microsoft Azure</li>
+ <li>Automate the detection of incident</li>
+ <li>Visualize log data in a Microsoft Sentinel Workbook</li>
+ <li>Generate custom alerts when incidents are detected</li>
+</ul>
 
-
+<h2>Summary</h2>
+In this project, I use Microsoft Azure to simulate and monitor cyberattacks. I create a virtual machine with the firewalls disabled to attract attackers. In addition, a custom PowerShell script is run on the VM to detect failed login attempts (Event ID 4625) and extract the attacker’s IP addresses to send to a third-party API. The API returns geographic data to store in a Log Analytics Workspace. The stored data is parsed into custom fields and visualized in a Microsoft Sentinel workbook on a world map. Additionally, an alert is configured to generate incidents for each failed login attempt. These alerts are then automatically emailed to a set email address. 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-
+- <b>PowerShell</b>
 
 <h2>Environments Used </h2>
 

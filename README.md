@@ -25,6 +25,7 @@ In this project, I use Microsoft Azure to simulate and monitor cyberattacks. I c
 <h2>Project walk-through:</h2>
 
 <p align="center">
+ <b>Some photos are best viewed in a seperate browser</b><br/><br />
 The first thing I did for this project was create a resource group. A resource group is essentially a folder where I can store all of my resources for easier access: <br/><br />
 <img src="https://i.imgur.com/xR691To.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />

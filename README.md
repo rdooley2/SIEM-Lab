@@ -160,7 +160,7 @@ Next, I named the rule and gave it a description. In addition, I wrote a simple 
 <br />
 <br />
 <br />
-After creating the rule, I went back to the Analytics Dashboard to see that multiple attackers had already triggered the alert, thus letting me know that it was working: <br/><br />
+After creating the rule, I went back to the Analytics Dashboard to see that my new rule was enabled and working: <br/><br />
 <img src="https://i.imgur.com/r5Gw5Ng.png" height="150%" width="150%" alt="SIEM Steps"/>
 <br />
 <br />

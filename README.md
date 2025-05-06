@@ -195,5 +195,5 @@ After waiting twenty-four hours, I decided to come back and check on my map. It 
 <br />
 <br />
 <br />
-Thanks for reading this far! I enjoyed learning all about everything Microsoft Azure has to offer, and I hope you did, too!<br/><br />
+Thanks for reading this far! I enjoyed learning all about everything Microsoft Azure has to offer, and I hope you did too!<br/><br />
 

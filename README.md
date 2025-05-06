@@ -59,7 +59,7 @@ Now that I had properly configured the VM, I needed to set up a Log Analytics Wo
 <br />
 <br />
 <br />
-With both the VM and LAW setup, I needed to create Microsoft Sentinel. Sentinel is Microsoft's version of a Security Information and Event Management system (SIEM). It is essential in analytics and threat visibility. It is also where we will be mapping the data we collect from attackers: <br/><br />
+With both the VM and LAW setup, I needed to create Microsoft Sentinel. Sentinel is Microsoft's version of a Security Information and Event Management system (SIEM). It is essential in analytics and threat visibility. It is also where I will be mapping the data we collect from attackers: <br/><br />
 <img src="https://i.imgur.com/XxE063J.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
 <br />
 <br />

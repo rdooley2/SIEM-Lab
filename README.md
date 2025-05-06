@@ -12,7 +12,7 @@ I used Microsoft Azure to create my own SIEM Dashboard and monitor for certain e
 </ul>
 
 <h2>Summary</h2>
-In this project, I use Microsoft Azure to simulate and monitor cyberattacks. I created a virtual machine with the firewalls disabled to attract attackers. In addition, a custom PowerShell script is run on the VM to detect failed login attempts (Event ID 4625) and extract the attacker's IP addresses to send to a third-party API. The API returns geographic data to store in a Log Analytics Workspace. The stored data is parsed into custom fields and visualized in a Microsoft Sentinel workbook on a world map. Additionally, I configured an alert to generate incidents for each failed login attempt. These alerts are then automatically emailed to a set email address.  
+In this project, I used Microsoft Azure to simulate and monitor cyberattacks. I deployed a virtual machine with its firewall disabled to attract malicious login attempts. A custom watchlist was configured to compare known IP addresses against those triggering Event 4625 (Failed Logon). The resulting data was visualized in a Microsoft Sentinel workbook using a world map to display geolocation data. Additionally, I set up an alert rule to generate incidents for each failed login attempt, which were automatically emailed to a designated address.
 
 <h2>Languages and Utilities Used</h2>
 

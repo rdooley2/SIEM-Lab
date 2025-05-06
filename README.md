@@ -43,13 +43,13 @@ Now that I had created the Virtual Network, it was time to create the Virtual Ma
 <br />
 <br />
 After I created the VM, I navigated back to the Resource Group to ensure that I had properly created everything: <br/><br />
-<img src="https://i.imgur.com/5dYHCz8.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/5dYHCz8.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 Next, I needed to configure the inbound security rules for the VM. I ended up deleting the RDP inbound rule and replacing it with one that allows all traffic the ability to attempt to access the VM remotely: <br/><br />
-<img src="https://i.imgur.com/qlOAc3I.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
-<img src="https://i.imgur.com/Sidage4.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/qlOAc3I.png" height="110%" width="110%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/Sidage4.png" height="110%" width="110%" alt="SIEM Steps"/> <br/><br />
 <br />
 <br />
 <br />
@@ -64,28 +64,28 @@ With both the VM and LAW setup, I needed to create Microsoft Sentinel. Sentinel 
 <br />
 <br />
 Once I had set up Sentinal, I had to connect it to the LAW so that Sentinel could use the collected log data: <br/><br />
-<img src="https://i.imgur.com/VcWaYTp.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/VcWaYTp.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 Next, I went into the Content hub for Microsoft Sentinel and installed the Windows Security Event add-on. Doing this will allow us to connect the LAW to the VM: <br/><br />
-<img src="https://i.imgur.com/HCLWhEZ.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
-<img src="https://i.imgur.com/yrCpkfB.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/HCLWhEZ.png" height="110%" width="110%" alt="SIEM Steps"/> <br/><br />
+<img src="https://i.imgur.com/yrCpkfB.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 With the Windows Security Event add-on installed, I had to configure it. I do this by opening the connector page: <br/><br />
-<img src="https://i.imgur.com/IhEedlN.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/IhEedlN.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 Once I clicked to open the connector page, I clicked to create a data collection rule. Making the rule connects the VM to the LAW and Sentinel instances: <br/><br />
-<img src="https://i.imgur.com/WdSVi47.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/WdSVi47.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 Navigating to the page for the VM, I was able to confirm that I had successfully configured the extension: <br/><br />
-<img src="https://i.imgur.com/NXlAVDj.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/NXlAVDj.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
@@ -110,12 +110,12 @@ The file I uploaded is one I found on the internet, and it has over fifty-thousa
 <br />
 <br />
 I then went to the LAW and wrote a quick KQL query to see the data from the uploaded file. The query helped me to confirm that everything went right: <br/><br />
-<img src="https://i.imgur.com/pXejnzQ.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/pXejnzQ.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 Next, I went into Sentinel to create a Workbook. The Workbook is where I will be displaying the collected data on a map. The first thing I did was remove the charts it automatically generated and added a query: <br/><br />
-<img src="https://i.imgur.com/vnPP7gs.png" height="80%" width="80%" alt="SIEM Steps"/><br/><br />
+<img src="https://i.imgur.com/vnPP7gs.png" height="110%" width="110%" alt="SIEM Steps"/><br/><br />
 <img src="https://i.imgur.com/KYtc2ef.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
@@ -127,12 +127,12 @@ The KQL query below is quite big, but essentially, what it is doing is pulling f
 <br />
 <br />
 With the new query, I could now see the full map. I will be coming back to this at the end of the report to show the final results: <br/><br />
-<img src="https://i.imgur.com/Fisexu3.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/Fisexu3.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 The next step was alerts and automation. I started with automation because I will need it when making the alert. I navigated to the automation tab within Sentinel and created a "playbook with incident trigger." A playbook is essentially the automation of selected tasks when a trigger occurs, in this case, an incident: <br/><br />
-<img src="https://i.imgur.com/t3YZtvc.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/t3YZtvc.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
@@ -155,12 +155,12 @@ Next, I named the rule and gave it a description. In addition, I wrote a simple 
 <img src="https://i.imgur.com/7TV7BQj.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
 <img src="https://i.imgur.com/xE9ittu.png" height="80%" width="80%" alt="SIEM Steps"/> 
 <img src="https://i.imgur.com/q1va0T4.png" height="80%" width="80%" alt="SIEM Steps"/> <br/><br />
-<img src="https://i.imgur.com/dlNioCD.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/dlNioCD.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 After creating the rule, I went back to the Analytics Dashboard to see that multiple attackers had already triggered the alert, thus letting me know that it was working: <br/><br />
-<img src="https://i.imgur.com/r5Gw5Ng.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/r5Gw5Ng.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
@@ -170,17 +170,17 @@ I then took a thirty-minute break and returned to check my email inbox. I was ab
 <br />
 <br />
 In addition, I navigated to the Incidents tab to see all of the alerts from the past thirty minutes: <br/><br />
-<img src="https://i.imgur.com/0UME359.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/0UME359.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 I also decided to create a dashboard. A dashboard allows you to customize your experience and display anything you need. In this case, I wanted to display the attack map, my resource groups for ease of access, and a clock. To do this, I navigated back to the attack map and pinned it to a new dashboard: <br/><br />
-<img src="https://i.imgur.com/yg5iMwk.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/yg5iMwk.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 I then navigated to my new dashboard and customized it using the available options: <br/><br />
-<img src="https://i.imgur.com/irO96Q6.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/irO96Q6.png" height="110%" width="110%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />

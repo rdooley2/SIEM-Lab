@@ -5,14 +5,14 @@
 I used Microsoft Azure to create my own SIEM Dashboard and monitor for certain events. This project aimed to achieve the following goals:
 <br><br>
 <ul>
- <li>Design and configure a functional SIEM in Microsoft Azure</li>
  <li>Visualize log data in a Microsoft Sentinel Workbook</li>
  <li>Generate custom alerts when incidents are detected</li>
  <li>Automate tasks when alerts are triggered</li>
+ <li>Design and configure a dashboard</li>
 </ul>
 
 <h2>Summary</h2>
-In this project, I used Microsoft Azure to simulate and monitor cyberattacks. I deployed a virtual machine with its firewall disabled to attract malicious login attempts. A custom watchlist was configured to compare known IP addresses against those triggering Event 4625 (Failed Logon). The resulting data was visualized in a Microsoft Sentinel workbook using a world map to display geolocation data. Additionally, I set up an alert rule to generate incidents for each failed login attempt, which were automatically emailed to a designated address.
+In this project, I used Microsoft Azure to simulate and monitor cyberattacks. I deployed a virtual machine with its firewall disabled to attract malicious login attempts. I configured a custom watchlist to compare known IP addresses against those triggering Event 4625 (Failed Logon). Using a world map to display geolocation data, I visualized the resulting data in a Microsoft Sentinel workbook. Additionally, I set up an alert rule to generate incidents for each failed login attempt, which I had set up to send email notifications to a designated address automatically.
 
 <h2>Languages and Utilities Used</h2>
 
@@ -25,7 +25,7 @@ In this project, I used Microsoft Azure to simulate and monitor cyberattacks. I 
 <h2>Project walk-through:</h2>
 
 <p align="center">
-<b>Some photos are best viewed in a seperate browser</b><br/><br />
+<b>Some photos are best viewed in a separate browser</b><br/><br />
 The first thing I did for this project was create a resource group. A resource group is essentially a folder where I can store all of my resources for easier access: <br/><br />
 <img src="https://i.imgur.com/xR691To.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
@@ -69,7 +69,7 @@ Once I had set up Sentinel, I had to connect it to the LAW so that Sentinel coul
 <br />
 <br />
 <br />
-Next, I went into the Content hub for Microsoft Sentinel and installed the Windows Security Event add-on. Doing this will allow us to connect the LAW to the VM: <br/><br />
+Next, I went into the Content hub for Microsoft Sentinel and installed the Windows Security Event add-on. Doing this will allow me to connect the LAW to the VM: <br/><br />
 <img src="https://i.imgur.com/HCLWhEZ.png" height="150%" width="150%" alt="SIEM Steps"/> <br/><br />
 <img src="https://i.imgur.com/yrCpkfB.png" height="150%" width="150%" alt="SIEM Steps"/>
 <br />
@@ -143,12 +143,12 @@ Creating the playbook was quite simple. The harder part is in the next step: <br
 <br />
 <br />
 Next, I headed to the logic app designer by clicking on the playbook I just made. The logic app designer allows me to customize the playbook's actions when an incident occurs. I connected my school email to Microsoft Azure to automate emails whenever an incident occurred. Then, I added the email section and added the information I wanted it to send out. In a professional environment, these emails would need to be more formal and detailed, but for the proof of concept, I designed them to be simple: <br/><br />
-<img src="https://i.imgur.com/Fisexu3.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src=https://i.imgur.com/mtblIB5.pnghttps://i.imgur.com/Fisexu3.png" height="150%" width="150%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
 With automation finished, I needed to create an alert that could trigger and use my configured playbook. To start, I navigated to the Analytics section in Sentinel and selected to create a scheduled query rule: <br/><br />
-<img src="https://i.imgur.com/J1uQTi1.png" height="80%" width="80%" alt="SIEM Steps"/>
+<img src="https://i.imgur.com/J1uQTi1.png" height="150%" width="150%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
@@ -190,7 +190,7 @@ In the end, it came out nice. The dashboard would be useful in a professional en
 <br />
 <br />
 <br />
-After waiting twenty-four hours, I decided to come back and check on my map. It ended up looking pretty cool!: <br/><br />
+After waiting twenty-four hours, I decided to come back and check on my map. It ended up looking pretty cool: <br/><br />
 <img src="" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />

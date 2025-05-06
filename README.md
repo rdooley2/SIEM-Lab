@@ -8,7 +8,7 @@ I used Microsoft Azure to create my own SIEM Dashboard and monitor for certain e
  <li>Design and configure a functional SIEM in Microsoft Azure</li>
  <li>Visualize log data in a Microsoft Sentinel Workbook</li>
  <li>Generate custom alerts when incidents are detected</li>
- <li>Automate tasks when incidents are detected</li>
+ <li>Automate tasks when alerts are triggered</li>
 </ul>
 
 <h2>Summary</h2>

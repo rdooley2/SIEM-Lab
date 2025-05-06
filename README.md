@@ -64,7 +64,7 @@ With both the VM and LAW setup, I needed to create Microsoft Sentinel. Sentinel 
 <br />
 <br />
 <br />
-Once I had set up Sentinal, I had to connect it to the LAW so that Sentinel could use the collected log data: <br/><br />
+Once I had set up Sentinel, I had to connect it to the LAW so that Sentinel could use the collected log data: <br/><br />
 <img src="https://i.imgur.com/VcWaYTp.png" height="150%" width="150%" alt="SIEM Steps"/>
 <br />
 <br />

@@ -190,8 +190,8 @@ In the end, it came out nice. The dashboard would be useful in a professional en
 <br />
 <br />
 <br />
-After waiting twenty-four hours, I decided to come back and check on my map. It ended up looking pretty cool: <br/><br />
-<img src="https://i.imgur.com/rUK7qsK.png" height="80%" width="80%" alt="SIEM Steps"/>
+After waiting fourty-eight hours, I decided to come back and check on my map. It ended up looking pretty cool: <br/><br />
+<img src="https://i.imgur.com/PCnBBIw.png" height="80%" width="80%" alt="SIEM Steps"/>
 <br />
 <br />
 <br />
